@@ -1,0 +1,44 @@
+1. it displays more questions than the user answered. one solution is to have a variable total_questions that will take its value from the beginning, when the scores table populated. If the scores table for example has 30 records, then the total_questions has the value 30 and so on. When the user submit all the answers there will be a percentage from the correct answers divided by total_questions.
+ 
+ok
+
+2. when all the questions are over (submitted) i want a table to show up. This table should have five columns.
+Column 1:  The number of the question. (aa)
+Column 2:  The question  (questionf)
+Column 3:  The answer (of the table scores T or F)
+Column 4:  The right answer (with the index of right1 i want to display the appropriate answer (from the table questions, a,b,c or d)
+Column 5:  if the typeq is '5' The second right answer (with the index of right2 i want to display the appropriate answer (from the table questions, a,b,c,d or e)
+
+
+
+ok, but where are the ignored questions? 
+When all the questions finished (submitted or ignored) there would be a table (temporary in js) created from the table scores with only the ignored questions. 
+Then the user select an ignored question and he must answer it. In this case there will be only the button submit. 
+This question (that is submitted, it will be not present anymore in the table of the ignored questions. 
+When the table with the ignored question has no records, the percentage with the score and the table with the answered questions will be showed up.
+
+
+ok
+I post you again a part of the code from server.js, about app.get(scores):
+
+and a part of the code from script.js, fetch('/scores'):
+
+
+
+The table scores in the db has 2 fields(aa, answer(varchar(1)). The second field (answer) at the end of the Test has as Value either 'T' or 'F'. I want this value to be displayed at the end of the test, when there is a Table that show the results. (3rd Column - UserAnswer). Instead as you see below it is displayed undefined. 
+
+
+I think the problem has to do with the server.js (perhaps with the sql statement). Is it possible to refer direct to the field answer in order to retrieve its value and the use it in the table that is created to show the results? 
+
+ok
+
+
+1. random display of the answers. ok
+
+2. questions with text filling   
+
+3. questions with matching
+
+4. run it in a tablet with android locally
+ 
+

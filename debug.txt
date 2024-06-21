@@ -1,0 +1,29 @@
+function handleSubmit() {
+    const question = questions[currentQuestionIndex];
+
+    const correctAnswers = question.answers
+        .filter(answer => answer.correct)
+        .map(answer => answer.text);
+
+    console.log('Selected answers:', selectedAnswers);
+    console.log('Correct answers:', correctAnswers);
+
+    let isCorrect;
+    if (question.typeq === 4) {
+        isCorrect = correctAnswers.includes(selectedAnswers[0]);
+    } else if (question.typeq === 5) {
+        isCorrect = selectedAnswers.length === 2 && selectedAnswers.every(answer => correctAnswers.includes(answer));
+    }
+
+    if (isCorrect) {
+        score++;
+        answeredQuestions.push({ ...question, correct: true });
+    } else {
+        answeredQuestions.push({ ...question, correct: false });
+    }
+
+    currentQuestionIndex++;
+    displayQuestion();
+}
+
+

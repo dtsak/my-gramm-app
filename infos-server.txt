@@ -1,0 +1,17 @@
+
+pame sto fakelo pou einai i efarmogi
+sto bash
+
+
+4 npm init -y
+
+5 npm install express sqlite3
+
+6 touch server.js   (mono se linux)
+
+
+apo edw basika
+
+7 node server.js
+
+8 Server running on http://localhost:3000
